@@ -74,8 +74,6 @@ namespace SendToXBMC
                     this.ProgressBar.Visibility = Visibility.Collapsed;
                 }
             }
-
-            PlaylistRequests.testStreamCloud();
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)

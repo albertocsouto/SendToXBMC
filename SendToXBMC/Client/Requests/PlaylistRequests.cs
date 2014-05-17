@@ -43,40 +43,5 @@ namespace SendToXBMC.Client.Requests
             }
             return false;
         }
-
-
-        public static async Task<Boolean> testStreamCloud ()
-        {
-
-                PlaylistClearCommandParams clearCommandParams = new PlaylistClearCommandParams();
-                clearCommandParams.PlaylistId = 1;
-                JsonRpcCommand clearCommand = new JsonRpcCommand("1", "Playlist.Clear", clearCommandParams);
-                JsonObject clearResult = await XBMCClient.sendRequestWithCommand(clearCommand);
-                if (clearResult != null)
-                {
-                    PlaylistItem playlistItem = new PlaylistItem();
-                    playlistItem.File = "plugin://plugin.video.pelisalacarta/?action=play&url=http%3A%2F%2Fstreamcloud.eu%2Fgdmjfzcnoujx&server=streamcloud";
-                    PlaylistAddCommandParams addParams = new PlaylistAddCommandParams();
-                    addParams.PlaylistId = 1;
-                    addParams.Item = playlistItem;
-                    JsonRpcCommand addCommand = new JsonRpcCommand("1", "Playlist.Add", addParams);
-                    JsonObject addResult = await XBMCClient.sendRequestWithCommand(addCommand);
-                    if (addResult != null)
-                    {
-                        PlayerItem playerItem = new PlayerItem();
-                        playerItem.PlaylistId = 1;
-                        PlayerOpenCommandParams playerOpenParams = new PlayerOpenCommandParams();
-                        playerOpenParams.Item = playerItem;
-                        JsonRpcCommand playerOpenCommand = new JsonRpcCommand("1", "Player.Open", playerOpenParams);
-                        JsonObject playResult = await XBMCClient.sendRequestWithCommand(playerOpenCommand);
-                        if (playResult != null)
-                        {
-                            return true;
-                        }
-                    }
-                }
-                return false;
-            
-        }
     }
 }
