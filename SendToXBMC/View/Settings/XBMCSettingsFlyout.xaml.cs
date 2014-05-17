@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using SendToXBMC.Util;
+using SendToXBMC.Client.Requests;
 
 // La plantilla de elemento Control flotante de configuración está documentada en http://go.microsoft.com/fwlink/?LinkId=273769
 
@@ -25,13 +26,6 @@ namespace SendToXBMC.View.Settings
             this.InitializeComponent();
 
             fillFormWithCurrentSettings();
-
-            this.BackClick += XBMCSettingsFlyout_BackClick;
-        }
-
-        private void XBMCSettingsFlyout_BackClick(object sender, BackClickEventArgs e)
-        {
-            SettingsManager.saveXBMCSettings(this.HostTextBox.Text, this.PortTextBox.Text, this.UserTextBox.Text, this.PasswordTextBox.Password);
         }
 
         private void fillFormWithCurrentSettings()
@@ -51,6 +45,23 @@ namespace SendToXBMC.View.Settings
             if (SettingsManager.XBMCPassword() != null)
             {
                 this.PasswordTextBox.Password = SettingsManager.XBMCPassword();
+            }
+        }
+
+        private async void TestAndSaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.TestResultTextBlock.Text = "";
+            SettingsManager.saveXBMCSettings(this.HostTextBox.Text, this.PortTextBox.Text, this.UserTextBox.Text, this.PasswordTextBox.Password);
+            this.TestProgressRing.Visibility = Visibility.Visible;
+            bool pingResult = await JSONRPCRequests.Ping();
+            this.TestProgressRing.Visibility = Visibility.Collapsed;
+            if (pingResult)
+            {
+                this.TestResultTextBlock.Text = "Test successful!";
+            }
+            else
+            {
+                this.TestResultTextBlock.Text = "Couldn't connect to your XBMC machine. Please check your settings";
             }
         }
     }

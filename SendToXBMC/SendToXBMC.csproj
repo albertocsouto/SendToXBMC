@@ -103,6 +103,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="SendToXBMC_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -115,6 +116,7 @@
     <Compile Include="Client\Model\JsonRpcCommand.cs" />
     <Compile Include="Client\Model\JsonRpcCommandParams.cs" />
     <Compile Include="Client\Model\PlaylistItem.cs" />
+    <Compile Include="Client\Requests\JSONRPCRequests.cs" />
     <Compile Include="Client\Requests\PlaylistRequests.cs" />
     <Compile Include="Client\XBMCClient.cs" />
     <Compile Include="Util\SettingsManager.cs" />
@@ -131,7 +133,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="SendToXBMC_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />
