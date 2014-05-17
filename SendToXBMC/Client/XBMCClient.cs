@@ -11,11 +11,11 @@ using System.IO;
 using System.Runtime.Serialization.Json;
 using Windows.UI.Popups;
 using Windows.Data.Json;
-using YoutubeToXBMC.Util;
-using YoutubeToXBMC.Client.Model;
+using SendToXBMC.Util;
+using SendToXBMC.Client.Model;
 
 
-namespace YoutubeToXBMC.Client
+namespace SendToXBMC.Client
 {
     class XBMCClient
     {

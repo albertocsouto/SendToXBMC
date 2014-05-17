@@ -2,7 +2,7 @@
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
   <Identity Name="bf2135ff-0a2c-4210-8d48-4ab9b6c8418f" Publisher="CN=Admin" Version="1.0.0.0" />
   <Properties>
-    <DisplayName>YoutubeToXBMC</DisplayName>
+    <DisplayName>SendToXBMC</DisplayName>
     <PublisherDisplayName>Admin</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -14,8 +14,8 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="YoutubeToXBMC.App">
-      <m2:VisualElements DisplayName="Send to XBMC" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="YoutubeToXBMC" ForegroundText="light" BackgroundColor="#B32A2A">
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="SendToXBMC.App">
+      <m2:VisualElements DisplayName="Send to XBMC" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="SendToXBMC" ForegroundText="light" BackgroundColor="#B32A2A">
         <m2:DefaultTile Square70x70Logo="Assets\Square70x70Logo.png" ShortName="Send to XBMC">
         </m2:DefaultTile>
         <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#B32A2A" />

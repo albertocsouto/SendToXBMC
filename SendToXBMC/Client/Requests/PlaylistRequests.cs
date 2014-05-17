@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.Data.Json;
-using YoutubeToXBMC.Client.Model;
-using YoutubeToXBMC.Util;
+using SendToXBMC.Client.Model;
+using SendToXBMC.Util;
 
-namespace YoutubeToXBMC.Client.Requests
+namespace SendToXBMC.Client.Requests
 {
     class PlaylistRequests
     {

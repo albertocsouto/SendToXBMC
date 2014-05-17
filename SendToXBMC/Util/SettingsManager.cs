@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YoutubeToXBMC.Util
+namespace SendToXBMC.Util
 {
     class SettingsManager
     {

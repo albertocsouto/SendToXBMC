@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
 
-namespace YoutubeToXBMC.Client.Model
+namespace SendToXBMC.Client.Model
 {
     [DataContract]
     abstract class JsonRpcCommandParams

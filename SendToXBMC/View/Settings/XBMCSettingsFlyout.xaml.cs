@@ -12,11 +12,11 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using YoutubeToXBMC.Util;
+using SendToXBMC.Util;
 
 // La plantilla de elemento Control flotante de configuración está documentada en http://go.microsoft.com/fwlink/?LinkId=273769
 
-namespace YoutubeToXBMC.View.Settings
+namespace SendToXBMC.View.Settings
 {
     public sealed partial class XBMCSettingsFlyout : SettingsFlyout
     {
