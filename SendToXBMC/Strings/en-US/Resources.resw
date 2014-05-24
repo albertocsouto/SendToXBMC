@@ -144,11 +144,8 @@
   <data name="SettingsButton.Content" xml:space="preserve">
     <value>XBMC Settings</value>
   </data>
-  <data name="SettingsKo" xml:space="preserve">
-    <value>Your settings seems to be wrong or incomplete. Please check them.</value>
-  </data>
-  <data name="SettingsOk" xml:space="preserve">
-    <value>Your settings seems to be OK. Try to send some Youtube videos from your internet browser or your favourite Youtube app using the Share Charm</value>
+  <data name="SettingsMessage" xml:space="preserve">
+    <value>Before start using the app, be sure of your XBMC settings are ok. If your settings are ok send your favourite videos of Youtube to XBMC using de share charm from your internet browser or your favourite app.</value>
   </data>
   <data name="TryingToSend" xml:space="preserve">
     <value>Trying to send URL {0}</value>

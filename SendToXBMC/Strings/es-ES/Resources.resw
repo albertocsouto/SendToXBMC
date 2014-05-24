@@ -144,11 +144,8 @@
   <data name="SettingsButton.Content" xml:space="preserve">
     <value>Ajustes XBMC</value>
   </data>
-  <data name="SettingsKo" xml:space="preserve">
-    <value>Tus ajustes están incompletos o bien son incorrectos. Por favor revísalos antes de comenzar a enviar vídeos.</value>
-  </data>
-  <data name="SettingsOk" xml:space="preserve">
-    <value>Tus ajustes se han guardado y parecen correctos. Prueba a compartir algún vídeo usando la opción de compartir desde el navegador o tu aplicación favorita para ver vídeos de Youtube.</value>
+  <data name="SettingsMessage" xml:space="preserve">
+    <value>Antes de empezar a compartir vídeos, asegurate de que has configurado correctamente los ajustes de XBMC. Si ya lo has hecho comparte un vídeo de Youtube mediante la opción de compartir desde tu navegador o tu aplicación favorita.</value>
   </data>
   <data name="TryingToSend" xml:space="preserve">
     <value>Envíando enlace {0}</value>

@@ -38,15 +38,7 @@ namespace SendToXBMC
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (SettingsManager.validateSettings())
-            {
-                this.InfoTextBox.Text = ResourcesManager.LocalizedString("SettingsOk");
-            }
-            else
-            {
-                this.InfoTextBox.Text = ResourcesManager.LocalizedString("SettingsKo");
-                return;
-            }
+            this.InfoTextBox.Text = ResourcesManager.LocalizedString("SettingsMessage");
 
             // It is recommended to only retrieve the ShareOperation object in the activation handler, return as
             // quickly as possible, and retrieve all data from the share target asynchronously.
