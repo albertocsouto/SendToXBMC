@@ -106,6 +106,8 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\es-ES\Resources.resw" />
     <None Include="YoutubeToXBMC_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +124,7 @@
     <Compile Include="Client\Requests\JSONRPCRequests.cs" />
     <Compile Include="Client\Requests\PlaylistRequests.cs" />
     <Compile Include="Client\XBMCClient.cs" />
+    <Compile Include="Util\ResourcesManager.cs" />
     <Compile Include="Util\SettingsManager.cs" />
     <Compile Include="View\Main\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

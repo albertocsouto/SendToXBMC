@@ -9,7 +9,7 @@
 
     <StackPanel  Background="#FFB32A2A">
         <ProgressBar Name="ProgressBar" IsIndeterminate="True" Visibility="Collapsed" Foreground="White" />
-        <TextBlock Name="InfoTextBox" Text="You must configure XBMC Settings first" Margin="0,100,0,23" FontSize="16" HorizontalAlignment="Center"/>
-        <Button Name="SettingsButton" Click="SettingsButton_Click" Content="XBMC Settings" HorizontalAlignment="Center"></Button>
+        <TextBlock Name="InfoTextBox" Text="You must configure XBMC Settings first" Margin="50,100,50,23" FontSize="16" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+        <Button x:Uid="SettingsButton" Name="SettingsButton" Click="SettingsButton_Click" Content="XBMC Settings" HorizontalAlignment="Center"></Button>
     </StackPanel>
 </Page>

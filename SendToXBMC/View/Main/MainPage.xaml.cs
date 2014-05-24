@@ -22,13 +22,9 @@ using SendToXBMC.Client.Requests;
 using SendToXBMC.View.Settings;
 using SendToXBMC.Util;
 
-// La plantilla de elemento Página en blanco está documentada en http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SendToXBMC
 {
-    /// <summary>
-    /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         ShareOperation shareOperation;
@@ -44,11 +40,11 @@ namespace SendToXBMC
         {
             if (SettingsManager.validateSettings())
             {
-                this.InfoTextBox.Text = "Your settings seems to be OK. Try to send some Youtube videos using the Share Charm";
+                this.InfoTextBox.Text = ResourcesManager.LocalizedString("SettingsOk");
             }
             else
             {
-                this.InfoTextBox.Text = "Your settings seems to be wrong or incomplete. Please check them.";
+                this.InfoTextBox.Text = ResourcesManager.LocalizedString("SettingsKo");
                 return;
             }
 
@@ -61,15 +57,15 @@ namespace SendToXBMC
                 {
                     this.sharedWebLink = await this.shareOperation.Data.GetWebLinkAsync();
                     this.ProgressBar.Visibility = Visibility.Visible;
-                    this.InfoTextBox.Text = String.Format("Trying to send URL {0}", this.sharedWebLink.AbsoluteUri);
+                    this.InfoTextBox.Text = String.Format(ResourcesManager.LocalizedString("TryingToSend"), this.sharedWebLink.AbsoluteUri);
                     Boolean playResult = await PlaylistRequests.playVideo(this.sharedWebLink.AbsoluteUri);
                     if (playResult)
                     {
-                        this.InfoTextBox.Text = "Video URL sent to XBMC";
+                        this.InfoTextBox.Text = ResourcesManager.LocalizedString("VideoSentOk");
                     }
                     else
                     {
-                        this.InfoTextBox.Text = "Cannot sent video to XBMC";
+                        this.InfoTextBox.Text = ResourcesManager.LocalizedString("VideoSentKo");
                     }
                     this.ProgressBar.Visibility = Visibility.Collapsed;
                 }

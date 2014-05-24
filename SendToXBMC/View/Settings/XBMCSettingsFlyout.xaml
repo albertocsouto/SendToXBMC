@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     IconSource="Assets/SmallLogo.png"
+    x:Uid="XBMCSettingsFlyout"
     Title="XBMC Settings"
     d:DesignWidth="346" HeaderBackground="#FFB32A2A">
 
@@ -19,20 +20,20 @@
         <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
 
             <!-- Encabezado de sección 1 -->
-            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="XBMC Settings" />
+            <TextBlock x:Uid="XBMCSettingsTitle" Style="{StaticResource TitleTextBlockStyle}" Text="XBMC Settings" />
 
             <!-- Cuerpo de sección 1 -->
-            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+            <TextBlock x:Uid="XBMCSettingsSubtitle" Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
                 <TextBlock.Text>
                     Configure here your XBMC Server.
                 </TextBlock.Text>
             </TextBlock>
 
-            <TextBox Name="HostTextBox" Margin="0,0,0,25" PlaceholderText="Host"></TextBox>
-            <TextBox Name="PortTextBox" Margin="0,0,0,25" PlaceholderText="Port" InputScope="Number"></TextBox>
-            <TextBox Name="UserTextBox" Margin="0,0,0,25" PlaceholderText="User"></TextBox>
-            <PasswordBox Name="PasswordTextBox" Margin="0,0,0,25" PlaceholderText="Password"></PasswordBox>
-            <Button Name="TestAndSaveButton" Content="Test and Save" HorizontalAlignment="Center" Click="TestAndSaveButton_Click" />
+            <TextBox x:Uid="HostTextBox" Name="HostTextBox" Margin="0,0,0,25" PlaceholderText="Host"></TextBox>
+            <TextBox x:Uid="PortTextBox" Name="PortTextBox" Margin="0,0,0,25" PlaceholderText="Port" InputScope="Number"></TextBox>
+            <TextBox x:Uid="UserTextBox" Name="UserTextBox" Margin="0,0,0,25" PlaceholderText="User"></TextBox>
+            <PasswordBox x:Uid="PasswordTextBox" Name="PasswordTextBox" Margin="0,0,0,25" PlaceholderText="Password"></PasswordBox>
+            <Button x:Uid="SaveAndTestButton" Name="SaveAndTestButton" HorizontalAlignment="Center" Click="SaveAndTestButton_Click" />
             <TextBlock Name="TestResultTextBlock" FontSize="14" HorizontalAlignment="Center" Margin="0,8,0,0" TextWrapping="Wrap"/>
             <ProgressRing Name="TestProgressRing" Visibility="Collapsed" IsActive="True" Foreground="#FFDE3B3B" />
         </StackPanel>

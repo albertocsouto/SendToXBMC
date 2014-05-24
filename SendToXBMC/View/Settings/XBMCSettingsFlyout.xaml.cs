@@ -15,7 +15,6 @@ using Windows.UI.Xaml.Navigation;
 using SendToXBMC.Util;
 using SendToXBMC.Client.Requests;
 
-// La plantilla de elemento Control flotante de configuración está documentada en http://go.microsoft.com/fwlink/?LinkId=273769
 
 namespace SendToXBMC.View.Settings
 {
@@ -48,7 +47,7 @@ namespace SendToXBMC.View.Settings
             }
         }
 
-        private async void TestAndSaveButton_Click(object sender, RoutedEventArgs e)
+        private async void SaveAndTestButton_Click(object sender, RoutedEventArgs e)
         {
             this.TestResultTextBlock.Text = "";
             SettingsManager.saveXBMCSettings(this.HostTextBox.Text, this.PortTextBox.Text, this.UserTextBox.Text, this.PasswordTextBox.Password);
@@ -57,11 +56,11 @@ namespace SendToXBMC.View.Settings
             this.TestProgressRing.Visibility = Visibility.Collapsed;
             if (pingResult)
             {
-                this.TestResultTextBlock.Text = "Test successful!";
+                this.TestResultTextBlock.Text = ResourcesManager.LocalizedString("XBMCSettingsTestOk");
             }
             else
             {
-                this.TestResultTextBlock.Text = "Couldn't connect to your XBMC machine. Please check your settings";
+                this.TestResultTextBlock.Text = ResourcesManager.LocalizedString("XBMCSettingsTestKo");
             }
         }
     }
