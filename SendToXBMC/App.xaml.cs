@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.ApplicationSettings;
+using Windows.UI.Popups;
+using SendToXBMC.View.Settings;
 
 // La plantilla Aplicación vacía está documentada en http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -78,6 +81,15 @@ namespace SendToXBMC
                 // parámetro
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
+
+            SettingsPane.GetForCurrentView().CommandsRequested += (_, exception) =>
+            {
+                exception.Request.ApplicationCommands.Add(
+                new SettingsCommand("P", "Privacy Policy", OpenPrivacyPolicy));
+                exception.Request.ApplicationCommands.Add(
+                new SettingsCommand("X", "XBMC Server Settings", OpenXBMCSettings));
+            };
+
             // Asegurarse de que la ventana actual está activa.
             Window.Current.Activate();
         }
@@ -112,6 +124,18 @@ namespace SendToXBMC
             rootFrame.Navigate(typeof(MainPage), args.ShareOperation);
             Window.Current.Content = rootFrame;
             Window.Current.Activate();
+        }
+
+        private void OpenPrivacyPolicy(IUICommand command)
+        {
+            PrivacyPolicySettingsFlyout settings = new PrivacyPolicySettingsFlyout();
+            settings.Show();
+        }
+
+        private void OpenXBMCSettings(IUICommand command)
+        {
+            XBMCSettingsFlyout settings = new XBMCSettingsFlyout();
+            settings.Show();
         }
     }
 }

@@ -128,6 +128,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\VideoURLParser.cs" />
+    <Compile Include="View\Settings\PrivacyPolicySettingsFlyout.xaml.cs">
+      <DependentUpon>PrivacyPolicySettingsFlyout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Settings\XBMCSettingsFlyout.xaml.cs">
       <DependentUpon>XBMCSettingsFlyout.xaml</DependentUpon>
     </Compile>
@@ -144,6 +147,10 @@
     <Content Include="Assets\Square70x70Logo.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-140.png" />
+    <Page Include="View\Settings\PrivacyPolicySettingsFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <None Include="Package.StoreAssociation.xml" />
     <None Include="SendToXBMC_StoreKey.pfx" />
     <Page Include="View\Settings\XBMCSettingsFlyout.xaml">
