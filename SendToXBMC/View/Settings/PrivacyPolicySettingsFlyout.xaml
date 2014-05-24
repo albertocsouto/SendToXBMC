@@ -1,0 +1,36 @@
+﻿<SettingsFlyout
+    x:Class="SendToXBMC.View.Settings.PrivacyPolicySettingsFlyout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SendToXBMC.View.Settings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    IconSource="Assets/SmallLogo.png"
+    Title="Privacy Policy"
+    d:DesignWidth="346">
+
+    <!-- Este StackPanel actúa como panel raíz para la distribución vertical de las secciones de contenido -->
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+        <!-- Los elementos StackPanel incluidos a continuación definen las distintas secciones de contenido -->
+
+        <!-- Contenido de sección 1-->
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+
+            <!-- Encabezado de sección 1 -->
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Privacy Policy" />
+
+            <!-- Cuerpo de sección 1 -->
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    We don't send any data to third party servers, only to your local XBMC server. Our source code is available at https://github.com/mowyapps/SendToXBMC
+                </TextBlock.Text>
+            </TextBlock>
+
+        </StackPanel>
+
+        <!-- Definir más secciones de contenido a continuación según sea necesario -->
+
+    </StackPanel>
+</SettingsFlyout>
