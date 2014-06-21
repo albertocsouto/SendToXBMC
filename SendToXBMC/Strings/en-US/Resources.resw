@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="HostTextBox.PlaceholderText" xml:space="preserve">
-    <value>Host</value>
+    <value>Host (192.168.0.5 for example)</value>
   </data>
   <data name="PasswordTextBox.PlaceholderText" xml:space="preserve">
     <value>Password (optional)</value>
   </data>
   <data name="PortTextBox.PlaceholderText" xml:space="preserve">
-    <value>Port</value>
+    <value>Port (8080 for example)</value>
   </data>
   <data name="PrivacyPolicy" xml:space="preserve">
     <value>Privacy Policy</value>
@@ -145,7 +145,7 @@
     <value>XBMC Settings</value>
   </data>
   <data name="SettingsMessage" xml:space="preserve">
-    <value>Before start using the app, be sure of your XBMC settings are ok. If your settings are ok send your favourite videos of Youtube to XBMC using de share charm from your internet browser or your favourite app.</value>
+    <value>Before start using the app, be sure of your XBMC settings are ok. If your settings are ok send your favourite videos of Youtube to XBMC using de share charm from your internet browser or your favourite app. For other kind of videos try activating uPnP in your XBMC and using the "PlayTo" Windows 8 built in option.</value>
   </data>
   <data name="TryingToSend" xml:space="preserve">
     <value>Trying to send URL {0}</value>

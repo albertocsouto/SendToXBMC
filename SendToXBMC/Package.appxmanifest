@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="3124MowyApps.SendToXBMC" Publisher="CN=BB7731B4-1956-4CE9-9D2A-E12BD2A9A3B8" Version="1.0.0.0" />
+  <Identity Name="3124MowyApps.SendToXBMC" Publisher="CN=BB7731B4-1956-4CE9-9D2A-E12BD2A9A3B8" Version="1.0.0.1" />
   <Properties>
     <DisplayName>Send To XBMC</DisplayName>
     <PublisherDisplayName>Mowy Apps</PublisherDisplayName>
